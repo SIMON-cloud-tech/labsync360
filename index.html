@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Management System</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="contain">
+    <div class="sidebar">
+        <label>
+            <input type="checkbox" />
+            <div class="menu-item">Dashboard overview</div>
+        </label>
+        <label>
+            <input type="checkbox" />
+            <div class="menu-item">Experiment queue</div>
+            <div class="sub-menu">
+                <a href="modules/queue/html/activeexperiments.html" target="_blank">Active Experiments</a>
+                <A href="modules/queue/html/pendingexperiments.html" target="_blank">Pending Experiments</A>
+                <a href="modules/queue/html/successfulbookings.html" target="_blank">Successful Bookings</a>
+                <a href="modules/queue/html/unsuccessfulbookings.html" target="_blank">Unsuccessful Bookings</a>
+            </div>
+        </label>
+        <label>
+            <input type="checkbox" />
+            <div class="menu-item">Booking Calendar</div>
+            <div class="sub-menu">
+                <A href="modules/booking/html/conflicts.html" target="_blank">Conflicts</A>
+                <a href="modules/booking/html/history.html" target="_blank">History</a>
+                <a href="modules/booking/html/book.html" target="_blank">Book Experiment</a>
+            </div>
+        </label>
+        <label>
+            <input type="checkbox" />
+            <div class="menu-item">Inventory Tracker</div>
+            <div class="sub-menu">
+                <A href="modules/inventory/html/reagents.html" target="_blank">Reagents</A>
+                <A href="modules/inventory/html/equipments.html" target="_blank">Equipments</A>
+                <a href="modules/inventory/html/expiryalerts.html" target="_blank">Expiry Alerts</a>
+            </div>
+        </label>
+    </div>
+    <div class="main">
+        <h2>Dashboard Overview</h2>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Active Bookings</h2>
+                <p id="activeBookings"></p>
+            </div>
+                <div class="card">
+                <h2>Successful Bookings</h2>
+                <p id="pendingExperiments"></p>
+            </div>
+                <div class="card">
+                <h2>Conflicted Bookings</h2>
+                <p id="conflictedBookings"></p>
+            </div>
+                <div class="card">
+                <h2>Lab Occupancy</h2>
+                <p id="conflictedBookings"></p>
+            </div>
+        </div>
+        <div class="table">
+            <h3>Real-time experiment metrics</h3>
+            <table> 
+                <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Group</th>
+                    <th>Time</th>
+                    <th>Technician</th>
+                    <th>Course</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022</td>
+                        <td>SIC Industrial Chemistry</td>
+                        <td>2:00PM</td>
+                        <td>Dr. Awour</td>
+                        <td>Industrial Chemistry</td>
+                    </tr>
+                        <tr>
+                        <td>2022</td>
+                        <td>SIC Industrial Chemistry</td>
+                        <td>2:00PM</td>
+                        <td>Dr. Awour</td>
+                        <td>Industrial Chemistry</td>
+                    </tr>
+                        <tr>
+                        <td>2022</td>
+                        <td>SIC Industrial Chemistry</td>
+                        <td>2:00PM</td>
+                        <td>Dr. Awour</td>
+                        <td>Industrial Chemistry</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="alerts">
+        <h2>System Alerts</h2>
+        <div class="errorcard">
+            <p id="endExperiment" style="color: goldenrod;">Industrial chemistry group has started an experiment</p>
+        </div>
+        <div class="errorcard">
+            <p id="newBooking" style="color: green;">Lab booked by Annita</p>
+        </div>
+        <div class="errorcard">
+            <p id="startExperiment" style="color: orange;">Experiment started at 12:00 AM BSC Group 3rd year</p>
+        </div>
+        <div class="errorcard">
+            <p id="conflictedBookings" style="color: red;">Session Slots overlap from 12:00 SIC and BSC group</p>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 LabSync360, Built for impact with Industrial Chemistry Precision</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

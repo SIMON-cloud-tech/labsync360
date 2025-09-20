@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #2e2e42;
+}
+
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #1e2a78;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.menu-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #2f3b8f;
+}
+
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #2f3b8f;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .sub-menu {
+  max-height: 500px;
+}
+
+.sub-menu a {
+  display: block;
+  text-decoration: none;
+  color: #dcdcdc;
+  padding: 10px 40px;
+}
+
+.sub-menu a:hover {
+  color: #ffffff;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.main h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 220px;
+  height: 120px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background-color: #e6ecf5;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table h3 {
+  background-color: #1e2a78;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #2f3b8f;
+  color: white;
+  padding: 12px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Alerts */
+.alerts {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alerts h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.errorcard {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-left: 5px solid #1e2a78;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .contain {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0.5rem;
+  }
+
+  .table {
+    width: 90%;
+    padding: 3px;
+  }
+
+  .alerts {
+    margin: 1rem;
+  }
+}
