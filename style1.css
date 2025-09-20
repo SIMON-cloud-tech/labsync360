@@ -91,28 +91,11 @@ input[type="checkbox"]:checked ~ .sub-menu {
   background-color: #e6ecf5;
   cursor: pointer;
 }
-
-.table {
-  margin-top: 30px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  overflow-x: auto;
-}
-
+/*TABLE STYLINGS*/
 .table h3 {
   background-color: #1e2a78;
   color: #fff;
-  padding: 15px;
-  text-align: center;
-  font-size: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
 
-table {
-  width: 100%;
-  border-collapse: collapse;
 }
 
 thead th {
@@ -129,6 +112,34 @@ tbody td {
 tbody tr:hover {
   background-color: #f0f4ff;
 }
+
+
+/* Table container: enable horizontal scroll */
+.table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Table itself: prevent squishing */
+.table table {
+  min-width: 600px; /* Ensures full table width on small screens */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table headers and cells: tighter spacing */
+.table th, .table td {
+  padding: 10px;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Prevents text wrapping mid-cell */
+}
+
+/*table stylings*/
 
 /* Alerts */
 .alerts {
@@ -159,33 +170,97 @@ footer {
   color: #555;
 }
 
-/* Mobile */
+/* Mobile *//* Enhanced Mobile Styling *//* Enhanced Mobile Styling */
 @media screen and (max-width: 768px) {
   .contain {
     flex-direction: column;
+    padding: 0 10px;
   }
 
   .sidebar {
     width: 100%;
-    min-height: auto;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .menu-item {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .sub-menu a {
+    padding: 8px 25px;
+    font-size: 0.95rem;
+  }
+
+  .main {
+    padding: 15px 10px;
+  }
+
+  .main h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
 
   .dashboard {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    align-items: stretch;
   }
 
   .card {
-    width: 90%;
-    margin: 0.5rem;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    font-size: 0.95rem;
   }
 
   .table {
-    width: 90%;
-    padding: 3px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .table h3 {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  table th, table td {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 
   .alerts {
-    margin: 1rem;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .errorcard {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 13px;
+  }
+}
+
+/* Responsive tweaks for very small screens */
+@media screen and (max-width: 480px) {
+  .table th, .table td {
+    padding: 8px 6px;
+    font-size: 0.85rem;
+  }
+
+  .table h3 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .table {
+    margin: 0 auto;
   }
 }
