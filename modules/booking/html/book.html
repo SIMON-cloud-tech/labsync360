@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LabSync360 Booking</title>
+  <link rel="stylesheet" href="/modules/booking/css/book.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>LabSync360 Booking Form</h2>
+    <p class="subtitle">Reserve your lab session with precision and clarity.</p>
+
+    <form id="bookingForm">
+      <label for="classRep">Class Representative</label>
+      <input type="text" id="classRep" placeholder="e.g. Annita Mwangi" />
+
+      <label for="school">School</label>
+      <input type="text" id="school" placeholder="e.g. School of Pure & Applied Sciences" />
+
+      <label for="programme">Programme</label>
+      <input type="text" id="programme" placeholder="e.g. BSc Industrial Chemistry" />
+
+      <label for="unit">Course Code</label>
+      <input type="text" id="unit" placeholder="e.g. CHM 301" />
+
+      <label for="time">Time</label>
+      <input type="time" id="time" />
+
+      <label for="equipments">Required Equipment</label>
+      <textarea id="equipments" placeholder="List reagents and apparatus..."></textarea>
+
+      <button type="submit">Submit Booking</button>
+      <p id="errorMessage"></p>
+      <p id="successMessage"></p>
+    </form>
+  </div>
+
+  <script src="/modules/booking/js/book.js"></script>
+</body>
+</html>
