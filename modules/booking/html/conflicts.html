@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Conflicts</title>
+  <link rel="stylesheet" href="/modules/booking/css/conflict.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Booking Conflicts</h2>
+    <p class="intro">These are sessions with overlapping time slots or resource clashes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Group A</th>
+          <th>Group B</th>
+          <th>Time Slot</th>
+          <th>Conflict Type</th>
+        </tr>
+      </thead>
+      <tbody id="conflictTable">
+        <!-- Rows will be injected by JS -->
+      </tbody>
+    </table>
+  </div>
+  <script src="/modules/booking/js/conflict.js"></script>
+</body>
+</html>
