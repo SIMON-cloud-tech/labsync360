@@ -1,0 +1,9 @@
+/* Same base styling as successfulbookings.css */
+h2 {
+  text-align: center;
+  color: #c0392b;
+}
+
+thead th {
+  background-color: #c0392b;
+}
