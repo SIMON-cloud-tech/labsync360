@@ -19,7 +19,7 @@ h2 {
 }
 
 table {
-  width: 100%;
+  width: 96%;
   border-collapse: collapse;
 }
 thead th {
@@ -31,4 +31,33 @@ thead th {
 tbody td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+@media screen and (max-width: 600px) {
+  table th, td{
+    padding: 4px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 335px) {
+    table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody td {
+    padding: 10px;
+    border: none;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #c0392b;
+  }
 }

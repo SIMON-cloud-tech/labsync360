@@ -32,3 +32,37 @@ tbody td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+
+@media screen and (max-width: 600px) {
+  table{
+    border-collapse: collapse;
+  }
+  table th,td{
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 364px) {
+    table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody td {
+    padding: 10px;
+    border: none;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #c0392b;
+  }
+}
