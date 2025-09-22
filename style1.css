@@ -92,51 +92,41 @@ input[type="checkbox"]:checked ~ .sub-menu {
   cursor: pointer;
 }
 /*TABLE STYLINGS*/
-.table h3 {
-  background-color: #1e2a78;
-  color: #fff;
-
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+.table h3{
+    color: #f4f6f9;
+    width: 100%;
+    padding: 5px;
+    background-color:#2f3b8f;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 thead th {
   background-color: #2f3b8f;
   color: white;
   padding: 12px;
+  text-align: left;
 }
 
 tbody td {
-  padding: 12px;
+  padding: 10px;
   border-bottom: 1px solid #ddd;
-}
+  }
 
 tbody tr:hover {
-  background-color: #f0f4ff;
-}
-
-
-/* Table container: enable horizontal scroll */
-.table {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 0;
-  background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-/* Table itself: prevent squishing */
-.table table {
-  min-width: 600px; /* Ensures full table width on small screens */
-  width: 100%;
-  border-collapse: collapse;
-}
-
-/* Table headers and cells: tighter spacing */
-.table th, .table td {
-  padding: 10px;
-  font-size: 0.9rem;
-  white-space: nowrap; /* Prevents text wrapping mid-cell */
+  background-color: #fceae9;
+  transition: 0.6s;
 }
 
 /*table stylings*/
@@ -174,12 +164,10 @@ footer {
 @media screen and (max-width: 768px) {
   .contain {
     flex-direction: column;
-    padding: 0 10px;
   }
 
   .sidebar {
     width: 100%;
-    padding: 10px 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
@@ -194,7 +182,11 @@ footer {
   }
 
   .main {
-    padding: 15px 10px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .main h2 {
@@ -211,25 +203,34 @@ footer {
   .card {
     width: 100%;
     height: auto;
-    padding: 12px;
+    padding: 10px;
     font-size: 0.95rem;
   }
 
   .table {
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
     padding: 0;
-    overflow-x: auto;
+
   }
 
   .table h3 {
     font-size: 18px;
+    margin-top: 30px;
     padding: 10px;
+    text-align: center;
   }
 
-  table th, table td {
-    padding: 10px;
-    font-size: 0.9rem;
+  table{
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table h3{
+    width: 100%;
+  }
+  table thead th{
+    padding: 3px;
   }
 
   .alerts {
@@ -250,10 +251,9 @@ footer {
 
 /* Responsive tweaks for very small screens */
 @media screen and (max-width: 480px) {
-  .table th, .table td {
-    padding: 8px 6px;
-    font-size: 0.85rem;
-  }
+table th{
+    padding: 2px;
+}
 
   .table h3 {
     font-size: 1rem;
@@ -261,6 +261,12 @@ footer {
   }
 
   .table {
-    margin: 0 auto;
+    margin: 0;
   }
+}
+@media screen and (max-width: 344px) {
+    .table h3{
+        background-color: transparent;
+        color: #1e2a78;
+    }
 }
