@@ -42,7 +42,18 @@ tbody tr:hover {
 }
 
 @media screen and (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
+  h2{
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  table th, td{
+    padding: 2px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+    table, thead, tbody, th, td, tr {
     display: block;
   }
 
